@@ -16,6 +16,14 @@ body {
     background-color: var(--secondary-color);
     color: var(--text-color);
     line-height: 1.6;
+    min-height: 100vh; /* Set tinggi minimal body = 100% tinggi layar */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+  /* display: flex; */
+    flex-grow: 1;
 }
 
 .container {
