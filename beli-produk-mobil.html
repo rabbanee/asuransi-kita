@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beli Asuransi Mobil - AsuransiKita</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">AsuransiKita</a>
+            <nav id="navbar">
+                </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="form-container">
+                <h2>Formulir Pembelian Asuransi Mobil</h2>
+                <p>Silakan isi semua data di bawah ini dengan benar untuk melanjutkan.</p>
+                <div id="message-container"></div>
+
+                <form id="car-purchase-form" novalidate>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="car-brand">Merk Mobil</label>
+                            <input type="text" id="car-brand" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="car-model">Jenis Mobil</label>
+                            <input type="text" id="car-model" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="car-year">Tahun Pembuatan</label>
+                            <input type="number" id="car-year" placeholder="Contoh: 2022" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="car-price">Harga Mobil (Rp)</label>
+                            <input type="number" id="car-price" placeholder="Contoh: 250000000" required>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <h4>Detail Kendaraan</h4>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="license-plate">Nomor Plat Mobil</label>
+                            <input type="text" id="license-plate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="engine-number">Nomor Mesin</label>
+                            <input type="text" id="engine-number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="chassis-number">Nomor Rangka</label>
+                            <input type="text" id="chassis-number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="owner-name">Nama Pemilik (sesuai STNK)</label>
+                            <input type="text" id="owner-name" required>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <h4>Foto Kendaraan</h4>
+                    <div class="form-group">
+                        <label for="car-photos">Upload 6 Foto (depan, belakang, kiri, kanan, dashboard, mesin)</label>
+                        <input type="file" id="car-photos" class="input-file" multiple required>
+                    </div>
+
+                    <button type="button" id="calculate-btn" class="btn">Hitung Premi</button>
+
+                    <div id="premium-result" class="premium-result-box"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AsuransiKita. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/premium.js"></script>
+</body>
+</html>

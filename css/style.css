@@ -1,0 +1,651 @@
+/* Import Font Poppins dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #007bff; /* Biru Profesional */
+    --secondary-color: #f8f9fa; /* Latar Belakang Cerah */
+    --text-color: #333;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --border-color: #ddd;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.form-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+.error {
+    background-color: var(--error-color);
+    color: white;
+}
+.success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+header {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.welcome-user {
+    font-weight: 600;
+}
+
+.btn-nav, .btn-nav-outline {
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-nav {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.btn-nav:hover {
+    background-color: #0056b3;
+}
+
+.btn-nav-outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-nav-outline:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQS-Xuurv2I1SWQLB4BMnJ54La3SpWQIBTgaSdOyNKcZNtgGsHLO9FybtdCqQnAJR2zSjd4kBJBKj6q7npN_hLKDclh2mvllcdAcwPgrTebDorIQ7o') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 120px 0;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.btn-hero {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.btn-hero:hover {
+    background-color: #0056b3;
+}
+
+.products {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.icon-wrapper {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+
+/* ============ Halaman Detail Produk ============ */
+.product-detail {
+    padding: 60px 0;
+}
+
+.product-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.product-icon {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.product-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #666;
+}
+
+.product-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.product-content h2 {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.product-content h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.product-content p, .product-content li {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.product-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.product-content ul li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.product-content ul li i {
+    color: var(--success-color);
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.product-content hr {
+    border: 0;
+    height: 1px;
+    background-color: #eee;
+    margin: 40px 0;
+}
+
+.coverage-types {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.coverage-card {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.cta-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--success-color);
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.btn-cta:hover {
+    background-color: #218838;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .coverage-types {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============ Styling Baru untuk Daftar Manfaat ============ */
+.manfaat-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 30px;
+}
+
+.manfaat-item {
+    display: flex; /* Membuat ikon dan teks sejajar */
+    align-items: flex-start; /* Posisi atas */
+    margin-bottom: 25px;
+}
+
+.manfaat-icon {
+    font-size: 20px;
+    color: var(--success-color);
+    margin-right: 20px;
+    margin-top: 5px; /* Sedikit penyesuaian posisi vertikal */
+}
+
+.manfaat-text h4 {
+    font-size: 18px;
+    margin: 0 0 5px 0; /* Hilangkan margin atas dan kurangi margin bawah */
+    color: #333;
+}
+
+.manfaat-text p {
+    margin: 0; /* Hilangkan semua margin pada paragraf deskripsi */
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Styling untuk Form Pembelian */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-container h4 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+.input-file {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+}
+
+/* Styling untuk Kotak Hasil Premi */
+.premium-result-box {
+    background-color: #f8f9fa;
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--success-color);
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.premium-price {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+.btn-checkout {
+    margin-top: 15px;
+    background-color: var(--success-color);
+}
+.btn-checkout:hover {
+    background-color: #218838;
+}
+
+/* Responsiveness untuk form grid */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============ Halaman Checkout ============ */
+.checkout-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.checkout-container h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.checkout-container p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.summary-box {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.summary-item.total strong {
+    font-size: 22px;
+    color: var(--primary-color);
+}
+
+.checkout-container h3 {
+    margin-bottom: 15px;
+}
+
+.payment-methods {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.payment-option {
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.payment-option:hover {
+    border-color: #aaa;
+}
+
+.payment-option input[type="radio"] {
+    display: none; /* Sembunyikan radio button asli */
+}
+
+/* .payment-option input[type="radio"]:checked + .payment-content { */
+    /* Ini akan di-style di CSS jika radio button terpilih, tapi kita akan pakai JS untuk ini */
+/* } */
+
+/* Styling saat radio button terpilih (border biru) */
+/* .payment-option.selected {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+} */
+
+/* TAMBAHKAN BLOK BARU INI */
+/* Otomatis menata kotak jika radio button di dalamnya terpilih */
+.payment-option:has(input[type="radio"]:checked) {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+    background-color: #f0f7ff;
+}
+
+.payment-content {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.payment-content i {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-right: 15px;
+    width: 30px; /* Lebar tetap agar teks rata */
+    text-align: center;
+}
+
+/* ============ Halaman Histori ============ */
+.history-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin: 40px auto;
+}
+
+.history-container h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.history-container p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.table-wrapper {
+    overflow-x: auto; /* Agar tabel bisa di-scroll di layar kecil */
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.history-table th, .history-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.history-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+}
+
+.history-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Badge untuk status */
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.status-lunas {
+    background-color: var(--success-color);
+}
+
+/* Pesan saat tidak ada histori */
+.no-history-message {
+    display: flex; /* diubah oleh JS */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+    color: #888;
+}
+
+.no-history-message i {
+    margin-bottom: 20px;
+}
+
+.no-history-message h3 {
+    font-size: 22px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.no-history-message .btn {
+    margin-top: 20px;
+    width: auto;
+    padding: 10px 30px;
+}
+
+.form-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .form-grid-3 {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beli Asuransi Jiwa - AsuransiKita</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">AsuransiKita</a>
+            <nav id="navbar"></nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="form-container">
+                <h2>Formulir Asuransi Jiwa</h2>
+                <p>Pilih Uang Pertanggungan untuk melihat estimasi premi bulanan Anda.</p>
+                <div id="message-container"></div>
+
+                <form id="life-purchase-form" novalidate>
+                    <div class="form-group">
+                        <label for="fullname">Nama Lengkap (sesuai KTP)</label>
+                        <input type="text" id="fullname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Tanggal Lahir</label>
+                        <input type="date" id="dob" required>
+                    </div>
+
+                    <hr>
+                    <div class="form-group">
+                        <label for="coverage-amount">Pilih Besaran Uang Pertanggungan (UP)</label>
+                        <select id="coverage-amount" required>
+                            <option value="" disabled selected>Pilih nominal...</option>
+                            <option value="1000000000">Rp 1.000.000.000</option>
+                            <option value="2000000000">Rp 2.000.000.000</option>
+                            <option value="3500000000">Rp 3.500.000.000</option>
+                            <option value="5000000000">Rp 5.000.000.000</option>
+                            <option value="10000000000">Rp 10.000.000.000</option>
+                        </select>
+                    </div>
+
+                    <button type="button" id="calculate-life-btn" class="btn">Hitung Premi</button>
+
+                    <div id="premium-result" class="premium-result-box"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AsuransiKita. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/premium.js"></script>
+</body>
+</html>

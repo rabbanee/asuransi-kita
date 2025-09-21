@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - AsuransiKita</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">AsuransiKita</a>
+            <nav id="navbar">
+                </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="checkout-container">
+                <h2>Ringkasan Pembayaran</h2>
+                <p>Harap periksa kembali detail pembelian Anda sebelum melanjutkan.</p>
+
+                <div class="summary-box">
+                    <div class="summary-item">
+                        <span>Produk Asuransi</span>
+                        <strong id="product-name">Memuat...</strong>
+                    </div>
+                    <hr>
+                    <div class="summary-item total">
+                        <span>Total Premi / Tahun</span>
+                        <strong id="premium-amount">Memuat...</strong>
+                    </div>
+                </div>
+
+                <h3>Pilih Metode Pembayaran</h3>
+                <div class="payment-methods">
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="va" checked>
+                        <div class="payment-content">
+                            <i class="fas fa-university"></i>
+                            <span>Virtual Account</span>
+                        </div>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="cc">
+                        <div class="payment-content">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Kartu Kredit / Debit</span>
+                        </div>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="ewallet">
+                        <div class="payment-content">
+                            <i class="fas fa-wallet"></i>
+                            <span>E-Wallet</span>
+                        </div>
+                    </label>
+                </div>
+
+                <button id="pay-btn" class="btn btn-checkout">
+                    <i class="fas fa-lock"></i> Bayar Sekarang
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AsuransiKita. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script> </body>
+</html>

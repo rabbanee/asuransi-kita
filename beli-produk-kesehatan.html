@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beli Asuransi Kesehatan - AsuransiKita</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">AsuransiKita</a>
+            <nav id="navbar"></nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="form-container">
+                <h2>Formulir Asuransi Kesehatan</h2>
+                <p>Lengkapi data diri Anda untuk melihat estimasi premi tahunan.</p>
+                <div id="message-container"></div>
+
+                <form id="health-purchase-form" novalidate>
+                    <div class="form-group">
+                        <label for="fullname">Nama Lengkap (sesuai KTP)</label>
+                        <input type="text" id="fullname" required>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="dob">Tanggal Lahir</label>
+                            <input type="date" id="dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="occupation">Pekerjaan</label>
+                            <input type="text" id="occupation" required>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <h4>Profil Kesehatan</h4>
+                    <div class="form-grid-3">
+                        <div class="form-group">
+                            <label for="smoker">Merokok?</label>
+                            <select id="smoker" required>
+                                <option value="" disabled selected>Pilih...</option>
+                                <option value="1">Ya</option>
+                                <option value="0">Tidak</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="hypertension">Riwayat Hipertensi?</label>
+                            <select id="hypertension" required>
+                                <option value="" disabled selected>Pilih...</option>
+                                <option value="1">Ya</option>
+                                <option value="0">Tidak</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="diabetes">Riwayat Diabetes?</label>
+                            <select id="diabetes" required>
+                                <option value="" disabled selected>Pilih...</option>
+                                <option value="1">Ya</option>
+                                <option value="0">Tidak</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="button" id="calculate-health-btn" class="btn">Hitung Premi</button>
+
+                    <div id="premium-result" class="premium-result-box"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AsuransiKita. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/premium.js"></script>
+</body>
+</html>
